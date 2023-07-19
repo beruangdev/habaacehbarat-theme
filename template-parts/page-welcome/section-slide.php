@@ -26,7 +26,17 @@ $post_list_posts = $chunks[1] ?? [];
         <?php foreach ($slide_posts as $post) : setup_postdata($post); ?>
           <div class="swiper-slide relative pb-16 md:pb-10">
             <a href="<?php the_permalink(); ?>">
-              <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="Slide Image" class="w-full aspect-video object-cover object-center">
+              <?php
+              $image_id = get_post_thumbnail_id();
+              $image_src = wp_get_attachment_image_src($image_id, "medium")[0];
+              $image_srcset = wp_get_attachment_image_srcset($image_id, "medium");
+              ?>
+              <?= get_template_part("template-parts/component/image", null, [
+                "src" => $image_src,
+                "srcset" => $image_srcset,
+                "alt" => get_the_title(),
+                "class" => "w-full aspect-video object-cover object-center"
+              ]) ?>
             </a>
             <div class="absolute bottom-0 inset-x-0 pt-16 px-4 md:px-6 pb-6 bg-gradient-to-t from-background-100 dark:from-background-900 from-50% via-background-100/60  dark:via-background-900/60 via-80% to-transparent bg-opacity-50">
               <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>

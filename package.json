@@ -26,6 +26,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "destr": "^2.0.0",
     "flowbite": "^1.7.0",
-    "swiper": "^10.0.4"
+    "swiper": "^10.0.4",
+    "vanilla-lazyload": "^17.8.4"
   }
 }

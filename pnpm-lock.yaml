@@ -23,6 +23,9 @@ dependencies:
   swiper:
     specifier: ^10.0.4
     version: 10.0.4
+  vanilla-lazyload:
+    specifier: ^17.8.4
+    version: 17.8.4
 
 devDependencies:
   autoprefixer:
@@ -961,6 +964,10 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /vanilla-lazyload@17.8.4:
+    resolution: {integrity: sha512-LP1fP0nl7SZom6wojLJXzj2du69txtPfDOoWQWgLDU8mz7NBrWL2Txx6p84f6d+gTEcGbA9lUynAx5CS0rqWsg==}
+    dev: false
 
   /vite-plugin-live-reload@3.0.2:
     resolution: {integrity: sha512-7QprEPLN9f4J9ljnovzoe2xmkTKTEn/QpxpwSmvbb2MtRQyWi0c0Zg3+s3cBhxHaKe9eMYHUG4OQGpCYwFwdaw==}

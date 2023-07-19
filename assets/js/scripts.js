@@ -4,6 +4,7 @@ import "flowbite";
 import "./language.js";
 import "./fingerprint.js";
 import "./translate.js";
+import "./image.js";
 
 import "swiper/css";
 import "swiper/css/scrollbar";

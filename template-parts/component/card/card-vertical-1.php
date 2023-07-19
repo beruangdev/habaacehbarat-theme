@@ -1,13 +1,18 @@
 <?php
 $image_id = get_post_thumbnail_id();
-$image_src = wp_get_attachment_image_src($image_id, $args['imgSize'] ?? "medium");
-$image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "medium");
+$image_src = wp_get_attachment_image_src($image_id, $args['imgSize'] ?? "thumbnail")[0];
+$image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "thumbnail");
 ?>
 <!-- card vertical 1 -->
 <div class="group flex flex-col flex-wrap">
   <a href="<?= get_permalink() ?>" class="no-underline hover:opacity-80 h-fit">
     <div class="aspect-video overflow-hidden w-full mb-2 rounded-md">
-      <img class="w-full object-cover object-center group-hover:scale-110" src="<?= $image_src ?>" srcset="<?= $image_srcset ?>" alt="">
+      <?= get_template_part("template-parts/component/image", null, [
+        "src" => $image_src,
+        "srcset" => $image_srcset,
+        "alt" => get_the_title(),
+        "class" => "w-full object-cover object-center group-hover:scale-110"
+      ]) ?>
     </div>
   </a>
   <div class="flex flex-col flex-1 relative">
