@@ -18,17 +18,17 @@ $slide_posts = $chunks[0] ?? [];
 $post_list_posts = $chunks[1] ?? [];
 ?>
 
-<div class="grid grid-cols-12 gap-6 container">
+<div class="grid grid-cols-12 gap-6 md:container">
   <!-- slide -->
   <div class="col-span-12 md:col-span-7">
     <div class="swiper slide-welcome">
       <div class="swiper-wrapper">
         <?php foreach ($slide_posts as $post) : setup_postdata($post); ?>
-          <div class="swiper-slide relative">
+          <div class="swiper-slide relative pb-16 md:pb-10">
             <a href="<?php the_permalink(); ?>">
               <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="Slide Image" class="w-full aspect-video object-cover object-center">
             </a>
-            <div class="absolute bottom-0 inset-x-0 pt-10 px-4 pb-6 bg-gradient-to-t from-background-100 dark:from-background-900 from-10% via-background-100/50  dark:via-background-900/50 via-60% to-transparent bg-opacity-50">
+            <div class="absolute bottom-0 inset-x-0 pt-16 px-4 md:px-6 pb-6 bg-gradient-to-t from-background-100 dark:from-background-900 from-50% via-background-100/60  dark:via-background-900/60 via-80% to-transparent bg-opacity-50">
               <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>
               <div class="flex items-center mb-3 gap-2 relative w-fit">
                 <?php foreach (get_the_category() as $category) : ?>
@@ -36,7 +36,7 @@ $post_list_posts = $chunks[1] ?? [];
                 <?php endforeach; ?>
               </div>
               <a href="<?php the_permalink(); ?>" class="no-underline hover:opacity-75 relative">
-                <h3 class="border-l-4 border-background-900 dark:border-background-100 pl-2 hover:border-primary-700 dark:hover:border-primary-700"><?php the_title(); ?></h2>
+                <h5 class="border-l-4 md:text-2xl border-background-900 dark:border-background-100 pl-2 hover:border-primary-700 dark:hover:border-primary-700"><?php the_title(); ?></h2>
               </a>
             </div>
           </div>
@@ -47,7 +47,7 @@ $post_list_posts = $chunks[1] ?? [];
   </div>
 
   <!-- post list -->
-  <div class="col-span-12 md:col-span-5 space-y-1">
+  <div class="col-span-12 md:col-span-5 space-y-4 px-4 md:px-0">
     <?php foreach ($post_list_posts as $post) : setup_postdata($post); ?>
       <?= get_template_part("template-parts/component/card/card-horizontal-2") ?>
     <?php endforeach; ?>

@@ -1,4 +1,5 @@
 <?php get_header() ?>
+<div class="md:mt-8"></div>
 <?= get_template_part('template-parts/page-welcome/section-slide'); ?>
 <hr class="opacity-0">
 <?= get_template_part('template-parts/page-welcome/section-berita-utama'); ?>
@@ -10,7 +11,7 @@
         "title" => "PEMILU 2024",
         "query" => [
           'post_type' => 'post',
-          'posts_per_page' => wp_is_mobile() ? 2 : 3,
+          'posts_per_page' => wp_is_mobile() ? 2 : 4,
           'tax_query' =>
           [
             // [

@@ -1,5 +1,31 @@
+<?php
+function get_menu_items_recursive($menu_items, $parent_id = 0)
+{
+  $menu_array = array();
+
+  foreach ($menu_items as $menu_item) {
+    if ($menu_item->menu_item_parent == $parent_id) {
+      $children = get_menu_items_recursive($menu_items, $menu_item->ID);
+
+      $menu_array[] = array(
+        'ID' => $menu_item->ID,
+        'title' => $menu_item->title,
+        'url' => $menu_item->url,
+        'children' => $children,
+      );
+    }
+  }
+
+  return $menu_array;
+}
+
+$menu_name = 'menu'; // Ganti dengan nama menu yang ingin Anda ambil
+$menu_items = wp_get_nav_menu_items($menu_name);
+$menus = get_menu_items_recursive($menu_items);
+?>
+
 <nav class="top-navbar shadow-lg fixed w-full z-20 top-0 left-0 bg-background-75 dark:bg-background-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center mx-auto p-4">
+  <div class="max-w-screen-xl flex flex-wrap items-center mx-auto py-2 px-4 md:p-4">
     <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center logo">
       <?php
       $custom_logo_id = get_theme_mod('custom_logo');
@@ -11,32 +37,6 @@
         <img src="<?= esc_url(get_template_directory_uri()) ?>/images/logo.svg" alt="<?= get_bloginfo('name') ?>" class="h-8 mr-3">
       <?php endif; ?>
     </a>
-
-    <?php
-    function get_menu_items_recursive($menu_items, $parent_id = 0)
-    {
-      $menu_array = array();
-
-      foreach ($menu_items as $menu_item) {
-        if ($menu_item->menu_item_parent == $parent_id) {
-          $children = get_menu_items_recursive($menu_items, $menu_item->ID);
-
-          $menu_array[] = array(
-            'ID' => $menu_item->ID,
-            'title' => $menu_item->title,
-            'url' => $menu_item->url,
-            'children' => $children,
-          );
-        }
-      }
-
-      return $menu_array;
-    }
-
-    $menu_name = 'menu'; // Ganti dengan nama menu yang ingin Anda ambil
-    $menu_items = wp_get_nav_menu_items($menu_name);
-    $menus = get_menu_items_recursive($menu_items);
-    ?>
 
     <div class="order-5 md:order-1 hidden w-full md:block md:w-auto ml-auto" id="navbar-multi-level">
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-0 md:mt-0 md:border-0 dark:border-gray-700">
@@ -113,3 +113,10 @@
 
   </div>
 </nav>
+
+<div class="w-full top-navbar-ghost"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".top-navbar-ghost").style.height = `${document.querySelector(".top-navbar").offsetHeight}px`;
+  })
+</script>

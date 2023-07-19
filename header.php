@@ -50,4 +50,4 @@ $is_desktop = !$is_mobile && !$is_tablet;
 
     <?= get_template_part('template-parts/component/navbar') ?> 
 
-    <main class="flex-grow w-full mt-24">
+    <main class="flex-grow w-full md:mt-8">

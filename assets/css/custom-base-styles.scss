@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+    font-size: 14px;
+}
 
 * {
-  @apply border-background-300 dark:border-background-700;
+    @apply border-background-300 dark:border-background-700;
 }
 
 body {
-  @apply bg-background-75 dark:bg-background-900 text-black dark:text-white;
-  font-family: "Poppins", sans-serif;
+    @apply bg-background-75 dark:bg-background-900 text-black dark:text-white;
+    font-family: "Poppins", sans-serif;
 }
 
 .footer {
-  @apply bg-background-100 dark:bg-background-950;
+    @apply bg-background-100 dark:bg-background-950;
 }
-
 
 h1,
 h2,
@@ -20,8 +22,12 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-medium whitespace-pre-line;
+    @apply font-medium whitespace-pre-line;
 }
+p {
+    @apply font-normal;
+}
+
 div,
 span,
 h1,
@@ -33,57 +39,58 @@ h6,
 p,
 textarea,
 input {
-  @apply no-underline;
+    @apply no-underline;
 }
 
 h1 {
-  @apply text-4xl;
+    @apply text-4xl;
 }
 
 h2 {
-  @apply text-3xl;
+    @apply text-3xl;
 }
 
 h3 {
-  @apply text-base md:text-2xl;
+    @apply text-2xl;
 }
 
 h4 {
-  @apply text-base md:text-xl;
+    @apply text-xl;
 }
 
 h5 {
-  @apply text-lg;
+    @apply text-lg;
 }
 
 h6 {
-  @apply text-base;
+    @apply text-base;
 }
 
 a {
-  @apply font-medium underline hover:text-primary-600 dark:hover:text-primary-700 hover:no-underline;
+    @apply font-medium underline hover:text-primary-600 dark:hover:text-primary-700 hover:no-underline;
 }
 
 hr {
-  @apply bg-background-300 dark:bg-background-700 h-px my-8 border-0;
+    @apply bg-background-300 dark:bg-background-700 h-px my-2 md:my-6 border-0;
 }
 
 svg {
-  @apply inline-block w-auto h-auto;
+    @apply inline-block w-auto h-auto;
 }
 
-img, body {
-  @apply duration-200;
+img,
+body {
+    @apply duration-200;
 }
 
 ::-webkit-scrollbar {
-  @apply w-2 h-2 ;
+    @apply w-2 h-2;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-background-300 rounded;
+    @apply bg-background-300 rounded;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-600 hover:bg-primary-800 rounded duration-300;
+    @apply bg-primary-600 hover:bg-primary-800 rounded duration-300;
 }

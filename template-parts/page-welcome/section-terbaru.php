@@ -11,7 +11,7 @@ $posts = $query->get_posts();
 <div class="">
   <div class="mb-3 flex justify-between">
     <div>
-      <h5>BERITA TERBARU</h5>
+      <h4>BERITA TERBARU</h4>
       <div class="bg-primary-600 h-1 w-20 mt-1"></div>
     </div>
   </div>
@@ -26,7 +26,7 @@ $posts = $query->get_posts();
           "title" => "LAPORAN INTERAKTIF",
           "query" => [
             'post_type' => 'post',
-            'posts_per_page' => wp_is_mobile() ? 2 : 3,
+            'posts_per_page' => wp_is_mobile() ? 2 : 4,
             'tax_query' =>
             [
               [
@@ -43,7 +43,7 @@ $posts = $query->get_posts();
           "title" => "REKOMENDASI UNTUK ANDA",
           "query" => [
             'post_type' => 'post',
-            'posts_per_page' => wp_is_mobile() ? 4 : 6,
+            'posts_per_page' => wp_is_mobile() ? 4 : 8,
             'tax_query' =>
             [
               [
@@ -60,7 +60,7 @@ $posts = $query->get_posts();
           "title" => "GALERI FOTO",
           "query" => [
             'post_type' => 'post',
-            'posts_per_page' => wp_is_mobile() ? 2 : 3,
+            'posts_per_page' => wp_is_mobile() ? 2 : 4,
             'tax_query' =>
             [
               [

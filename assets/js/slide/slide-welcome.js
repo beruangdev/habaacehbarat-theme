@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
       modules: [Scrollbar, Autoplay],
       grabCursor: true,
       loop: true,
-      // autoplay: {
-      //   delay: 2500,
-      //   disableOnInteraction: true,
-      // },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: true,

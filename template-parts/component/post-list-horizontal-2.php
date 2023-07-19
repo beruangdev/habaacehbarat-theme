@@ -2,10 +2,10 @@
 $query = new WP_Query($args['query']);
 $posts = $query->get_posts();
 ?>
-<div class="bg-background-800 dark:bg-background-925 p-4 rounded text-white">
+<div class="bg-background-800 dark:bg-background-925 p-4 rounded-md text-white">
   <div class="mb-3 flex justify-between">
     <div>
-      <h5><?= $args["title"] ?></h5>
+      <h4><?= $args["title"] ?></h4>
       <div class="bg-primary-600 h-1 w-20 mt-1"></div>
     </div>
     <a href="#">
@@ -13,7 +13,7 @@ $posts = $query->get_posts();
     </a>
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
     <?php foreach ($posts as $post) : setup_postdata($post); ?>
       <?= get_template_part("template-parts/component/card/card-vertical-1") ?>
     <?php endforeach; ?>

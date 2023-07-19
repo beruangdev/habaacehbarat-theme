@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".slide-berita-utama")) {
     new Swiper(".slide-berita-utama", {
       modules: [FreeMode, Scrollbar],
-      slidesPerView: 1.6,
+      slidesPerView: 2.15,
       spaceBetween: 10,
       freeMode: true,
       scrollbar: {
