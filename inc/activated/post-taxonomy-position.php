@@ -30,4 +30,17 @@ add_action('init', function () {
     'Slide Welcome Page',
     'position'
   );
+
+  wp_insert_term(
+    'Berita Utama',
+    'position'
+  );
+  wp_insert_term(
+    'Laporan Interaktif',
+    'position'
+  );
+  wp_insert_term(
+    'Rekomendasi',
+    'position'
+  );
 });

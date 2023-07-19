@@ -4,11 +4,11 @@ $args = [
   'posts_per_page' => 9,
   'tax_query' =>
   [
-    // [
-    //   'taxonomy' => 'position',
-    //   'field' => 'slug',
-    //   'terms' => 'berita-utama'
-    // ]
+    [
+      'taxonomy' => 'position',
+      'field' => 'slug',
+      'terms' => 'berita-utama'
+    ]
   ]
 ];
 

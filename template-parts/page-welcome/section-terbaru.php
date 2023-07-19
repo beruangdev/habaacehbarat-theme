@@ -2,14 +2,6 @@
 $args = [
   'post_type' => 'post',
   'posts_per_page' => 20,
-  'tax_query' =>
-  [
-    // [
-    //   'taxonomy' => 'position',
-    //   'field' => 'slug',
-    //   'terms' => 'berita-utama'
-    // ]
-  ]
 ];
 
 $query = new WP_Query($args);
@@ -37,11 +29,11 @@ $posts = $query->get_posts();
             'posts_per_page' => 3,
             'tax_query' =>
             [
-              // [
-              //   'taxonomy' => 'position',
-              //   'field' => 'slug',
-              //   'terms' => 'berita-utama'
-              // ]
+              [
+                'taxonomy' => 'position',
+                'field' => 'slug',
+                'terms' => 'laporan-interaktif'
+              ]
             ]
           ]
         ]); ?>
@@ -54,11 +46,11 @@ $posts = $query->get_posts();
             'posts_per_page' => 6,
             'tax_query' =>
             [
-              // [
-              //   'taxonomy' => 'position',
-              //   'field' => 'slug',
-              //   'terms' => 'berita-utama'
-              // ]
+              [
+                'taxonomy' => 'position',
+                'field' => 'slug',
+                'terms' => 'rekomendasi'
+              ]
             ]
           ]
         ]); ?>
@@ -71,11 +63,11 @@ $posts = $query->get_posts();
             'posts_per_page' => 3,
             'tax_query' =>
             [
-              // [
-              //   'taxonomy' => 'position',
-              //   'field' => 'slug',
-              //   'terms' => 'berita-utama'
-              // ]
+              [
+                'taxonomy' => 'position',
+                'field' => 'slug',
+                'terms' => 'berita-utama'
+              ]
             ]
           ]
         ]); ?>
