@@ -32,7 +32,7 @@ $post_list_posts = $chunks[1] ?? [];
               <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>
               <div class="flex items-center mb-3 gap-2 relative w-fit">
                 <?php foreach (get_the_category() as $category) : ?>
-                  <a href="<?= get_category_link($category->term_id) ?>" class="text-sm font-semibold"><?= esc_html($category->name) ?></a>
+                  <a href="<?= get_category_link($category->term_id) ?>" class="text-xs md:text-sm font-semibold"><?= esc_html($category->name) ?></a>
                 <?php endforeach; ?>
               </div>
               <a href="<?php the_permalink(); ?>" class="no-underline hover:opacity-75 relative">

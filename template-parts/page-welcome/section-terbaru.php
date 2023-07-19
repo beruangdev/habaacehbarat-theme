@@ -26,7 +26,7 @@ $posts = $query->get_posts();
           "title" => "LAPORAN INTERAKTIF",
           "query" => [
             'post_type' => 'post',
-            'posts_per_page' => 3,
+            'posts_per_page' => wp_is_mobile() ? 2 : 3,
             'tax_query' =>
             [
               [
@@ -43,7 +43,7 @@ $posts = $query->get_posts();
           "title" => "REKOMENDASI UNTUK ANDA",
           "query" => [
             'post_type' => 'post',
-            'posts_per_page' => 6,
+            'posts_per_page' => wp_is_mobile() ? 4 : 6,
             'tax_query' =>
             [
               [
@@ -60,7 +60,7 @@ $posts = $query->get_posts();
           "title" => "GALERI FOTO",
           "query" => [
             'post_type' => 'post',
-            'posts_per_page' => 3,
+            'posts_per_page' => wp_is_mobile() ? 2 : 3,
             'tax_query' =>
             [
               [

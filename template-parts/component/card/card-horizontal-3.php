@@ -4,6 +4,7 @@ $image_src = wp_get_attachment_image_src($image_id, $args['imgSize'] ?? "medium"
 $image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "medium");
 ?>
 
+<!-- card horizontal 3 -->
 <div class="group flex gap-3 rounded border hover:bg-background-200/30 dark:hover:bg-background-925/50 w-full cursor-pointer relative">
   <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>
   <a href="<?= get_permalink() ?>" class="min-w-[20%] w-[20%]">

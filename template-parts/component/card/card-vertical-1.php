@@ -10,7 +10,7 @@ $image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "m
       <img class="w-full object-cover object-center group-hover:scale-110" src="<?= $image_src ?>" srcset="<?= $image_srcset ?>" alt="">
     </div>
   </a>
-  <div class="flex flex-col flex-1">
+  <div class="flex flex-col flex-1 relative">
     <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>
     <a href="<?= get_permalink() ?>" class="no-underline hover:opacity-80">
       <h6 class="leading-5 mb-4 text-sm group-hover:text-primary-700 group-hover:dark:text-primary-500"><?= get_the_title(); ?></h6>
