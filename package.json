@@ -6,7 +6,7 @@
     "dev": "cross-env NODE_ENV=development vite",
     "start": "cross-env NODE_ENV=development vite build --watch",
     "build": "vite build",
-    "push": "vite build && git add . && git commit -m 'update' && git push"
+    "push": "pnpm build && git add . && git commit -m 'update' && git push"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
