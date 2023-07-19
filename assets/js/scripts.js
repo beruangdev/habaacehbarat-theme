@@ -12,8 +12,8 @@ import "swiper/css/scrollbar";
 import "./slide/slide-welcome.js";
 import "./slide/slide-berita-utama.js";
 
-import feather from "feather-icons";
+// import feather from "feather-icons";
 
 window.onload = () => {
-    feather.replace();
+    // feather.replace();
 };
