@@ -26,7 +26,7 @@ $post_list_posts = $chunks[1] ?? [];
         <?php foreach ($slide_posts as $post) : setup_postdata($post); ?>
           <div class="swiper-slide relative">
             <a href="<?php the_permalink(); ?>">
-              <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="Slide Image" class="w-full aspect-video">
+              <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="Slide Image" class="w-full aspect-video object-cover object-center">
             </a>
             <div class="absolute bottom-0 inset-x-0 pt-10 px-4 pb-6 bg-gradient-to-t from-background-100 dark:from-background-900 from-10% via-background-100/50  dark:via-background-900/50 via-60% to-transparent bg-opacity-50">
               <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>

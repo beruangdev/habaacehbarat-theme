@@ -4,7 +4,7 @@
 <?= get_template_part('template-parts/page-welcome/section-berita-utama'); ?>
 <hr class="opacity-0">
 <div class="container">
-  <div class="grid grid-cols-12 space-x-4">
+  <div class="grid grid-cols-12 md:space-x-4">
     <div class="col-span-12 md:col-span-8 mb-6">
       <?= get_template_part('template-parts/component/post-list-horizontal', null, [
         "title" => "PEMILU 2024",

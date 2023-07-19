@@ -3,7 +3,7 @@ $image_id = get_post_thumbnail_id();
 $image_src = wp_get_attachment_image_src($image_id, $args['imgSize'] ?? "medium");
 $image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "medium");
 ?>
-
+<!-- card vertical 1 -->
 <div class="flex flex-col flex-wrap">
   <a href="<?= get_permalink() ?>" class="no-underline hover:opacity-80 h-fit">
     <div class="aspect-video overflow-hidden w-full mb-2">
@@ -16,7 +16,7 @@ $image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "m
       <h6 class="leading-5 mb-4 text-sm group-hover:text-primary-700 group-hover:dark:text-primary-500"><?= get_the_title(); ?></h6>
     </a>
     <div class="opacity-90 w-fit mt-auto">
-      <div class="text-xs flex gap-x-2">
+      <div class="text-xs flex flex-wrap gap-2 flex-col md:flex-row">
         <p class="flex items-center gap-1"><i data-feather="user" class="h-3.5"></i><?= get_the_author(); ?></p>
         <p class="flex items-center gap-1"><i data-feather="clock" class="h-3.5"></i><?= human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?></p>
       </div>
