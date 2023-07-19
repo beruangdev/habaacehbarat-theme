@@ -47,7 +47,7 @@ $is_desktop = !$is_mobile && !$is_tablet;
 
 <body <?php body_class('theme-habaacehbarat') ?>>
     <?php wp_body_open(); ?>
-    <? get_template_part('template-parts/component/navbar') ?> 
+    <? get_template_part('template-parts\component\navbar') ?> 
 
 
     <main class="flex-grow w-full mt-24">
