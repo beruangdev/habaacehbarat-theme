@@ -30,7 +30,7 @@ $posts = $query->get_posts();
         </div>
       <?php endforeach; ?>
     </div>
-    <div class="swiper-scrollbar"></div>
+    <div class="swiper-scrollbar !w-full !left-0"></div>
   </div>
 </div>
 
