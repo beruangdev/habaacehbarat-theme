@@ -4,7 +4,7 @@ import { Scrollbar, Autoplay, } from "swiper/modules";
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".slide-welcome")) {
     new Swiper(".slide-welcome", {
-      modules: [SwiperModules.Scrollbar, SwiperModules.Autoplay],
+      modules: [Scrollbar, Autoplay],
       grabCursor: true,
       loop: true,
       autoplay: {
