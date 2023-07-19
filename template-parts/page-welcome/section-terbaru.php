@@ -16,7 +16,7 @@ $posts = $query->get_posts();
     </div>
   </div>
 
-  <div class="flex flex-col space-y-3">
+  <div class="flex flex-col space-y-2 md:space-y-3">
     <?php foreach ($posts as $index => $post) : setup_postdata($post); ?>
       <div>
         <?= get_template_part("template-parts/component/card/card-horizontal-3") ?>

@@ -2,7 +2,7 @@
 $query = new WP_Query($args['query']);
 $posts = $query->get_posts();
 ?>
-<div class="bg-background-800 dark:bg-background-925 p-4 rounded-md text-white">
+<div class="bg-background-800 dark:bg-background-925 p-4 rounded-md text-white !mb-3">
   <div class="mb-3 flex justify-between">
     <div>
       <h4><?= $args["title"] ?></h4>

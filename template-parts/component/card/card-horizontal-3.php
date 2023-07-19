@@ -8,7 +8,7 @@ $image_srcset = wp_get_attachment_image_srcset($image_id, $args['imgSize'] ?? "m
 <div class="group flex gap-3 w-full cursor-pointer relative">
   <a href="<?= get_permalink() ?>" class="absolute inset-0"></a>
   <a href="<?= get_permalink() ?>" class="min-w-[23%] w-[23%] md:min-w-[20%] md:w-[20%]">
-    <div class="aspect-[16/11] overflow-hidden w-full mb-3 rounded-md">
+    <div class="aspect-square md:aspect-[16/11] overflow-hidden w-full mb-3 rounded-md">
       <img class="w-full object-cover object-center group-hover:scale-110" src="<?= $image_src ?>" srcset="<?= $image_srcset ?>" alt="">
     </div>
   </a>

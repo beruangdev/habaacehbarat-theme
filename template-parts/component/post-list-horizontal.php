@@ -2,7 +2,8 @@
 $query = new WP_Query($args['query']);
 $posts = $query->get_posts();
 ?>
-<div class="bg-background-200/30 dark:bg-background-925 p-4 rounded-md">
+<!-- post list horizontal -->
+<div class="bg-background-200/30 dark:bg-background-925 p-4 rounded-md !mb-3">
   <div class="mb-3 flex justify-between">
     <div>
       <h4><?= $args["title"] ?></h4>

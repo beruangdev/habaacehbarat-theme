@@ -25,7 +25,7 @@
       <div class="mb-6"></div>
       <?= get_template_part('template-parts/page-welcome/section-terbaru'); ?>
     </div>
-    <div class="col-span-12 md:col-span-4 space-y-3">
+    <div class="col-span-12 md:col-span-4 space-y-3 hidden md:block">
       <?php for ($i = 0; $i < 10; $i++) : ?>
         <div class="bg-red-800 text-white w-full aspect-[16/11] flex items-center justify-center">
           <h3>ADS</h3>
