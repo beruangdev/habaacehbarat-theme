@@ -30,7 +30,7 @@ $posts = $query->get_posts();
   <div class="grid grid-cols-3 gap-4">
     <?php foreach ($posts as $post) : setup_postdata($post); ?>
       <div>
-        <? get_template_part("template-parts/component/card/card-vertical-1") ?>
+        <?= get_template_part("template-parts/component/card/card-vertical-1") ?>
       </div>
     <?php endforeach; ?>
   </div>

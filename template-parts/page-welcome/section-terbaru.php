@@ -19,10 +19,10 @@ $posts = $query->get_posts();
   <div class="flex flex-col space-y-3">
     <?php foreach ($posts as $index => $post) : setup_postdata($post); ?>
       <div>
-        <? get_template_part("template-parts/component/card/card-horizontal-3") ?>
+        <?= get_template_part("template-parts/component/card/card-horizontal-3") ?>
       </div>
       <?php if ($index === 5) : ?>
-        <?php get_template_part('template-parts/component/post-list-horizontal', null, [
+        <?= get_template_part('template-parts/component/post-list-horizontal', null, [
           "title" => "LAPORAN INTERAKTIF",
           "query" => [
             'post_type' => 'post',
@@ -39,7 +39,7 @@ $posts = $query->get_posts();
         ]); ?>
       <?php endif; ?>
       <?php if ($index === 10) : ?>
-        <?php get_template_part('template-parts/component/post-list-horizontal-2', null, [
+        <?= get_template_part('template-parts/component/post-list-horizontal-2', null, [
           "title" => "REKOMENDASI UNTUK ANDA",
           "query" => [
             'post_type' => 'post',
@@ -56,7 +56,7 @@ $posts = $query->get_posts();
         ]); ?>
       <?php endif; ?>
       <?php if ($index === 15) : ?>
-        <?php get_template_part('template-parts/component/post-list-horizontal', null, [
+        <?= get_template_part('template-parts/component/post-list-horizontal', null, [
           "title" => "GALERI FOTO",
           "query" => [
             'post_type' => 'post',

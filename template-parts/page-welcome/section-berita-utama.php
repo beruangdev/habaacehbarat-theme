@@ -26,7 +26,7 @@ $posts = $query->get_posts();
     <div class="swiper-wrapper pb-6">
       <?php foreach ($posts as $post) : setup_postdata($post); ?>
         <div class="w-48 inline-block swiper-slide">
-          <? get_template_part("template-parts/component/card/card-vertical-1") ?>
+          <?= get_template_part("template-parts/component/card/card-vertical-1") ?>
         </div>
       <?php endforeach; ?>
     </div>

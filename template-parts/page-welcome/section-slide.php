@@ -49,7 +49,7 @@ $post_list_posts = $chunks[1] ?? [];
   <!-- post list -->
   <div class="col-span-12 md:col-span-5 space-y-1">
     <?php foreach ($post_list_posts as $post) : setup_postdata($post); ?>
-      <? get_template_part("template-parts/component/card/card-horizontal-2") ?>
+      <?= get_template_part("template-parts/component/card/card-horizontal-2") ?>
     <?php endforeach; ?>
   </div>
 </div>

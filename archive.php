@@ -24,7 +24,7 @@
       <div class="flex flex-col gap-4">
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('template-parts/component/card/card-horizontal-3'); ?>
+            <?= get_template_part('template-parts/component/card/card-horizontal-3'); ?>
           <?php endwhile ?>
         <?php else : ?>
           <p><?= post_type_archive_title() ?> is empty</p>
@@ -34,7 +34,7 @@
   </div>
 
   <div class="mx-auto w-fit">
-    <?php get_template_part('template-parts/component/pagination'); ?>
+    <?= get_template_part('template-parts/component/pagination'); ?>
   </div>
 
 </div>
