@@ -1,3 +1,5 @@
+import { getLS, setLS } from './libs/helpers/local-storage'
+
 // import FingerprintJS from "@fingerprintjs/fingerprintjs";
 if (!getLS("visitorId")) {
     (async () => {

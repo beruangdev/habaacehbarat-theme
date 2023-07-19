@@ -1,4 +1,3 @@
-window.setLS = setLS
 function setLS(key, value, expiryInMinutes = 60 * 24 * 7) {
   const now = new Date();
   const item = {
@@ -7,7 +6,6 @@ function setLS(key, value, expiryInMinutes = 60 * 24 * 7) {
   };
   localStorage.setItem(key, JSON.stringify(item));
 }
-window.getLS = getLS
 function getLS(key) {
   const itemStr = localStorage.getItem(key);
   if (!itemStr) {

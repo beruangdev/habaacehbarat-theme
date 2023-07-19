@@ -1,3 +1,5 @@
+import { getLS, setLS } from './libs/helpers/local-storage'
+
 let selectEl = document.querySelector(`select[id="language"]`);
 if (selectEl) {
     let datals = localStorage.getItem("fat:language");

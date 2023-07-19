@@ -1,4 +1,3 @@
-window.randomStr = randomStr
 export function randomStr(length = 8) {
     var characters =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
