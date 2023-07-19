@@ -1,10 +1,10 @@
-import { Swiper } from "swiper";
-import { FreeMode, Scrollbar } from "swiper/modules";
+// import { Swiper } from "swiper";
+// import { FreeMode, Scrollbar } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".slide-berita-utama")) {
     new Swiper(".slide-berita-utama", {
-      modules: [FreeMode, Scrollbar],
+      modules: [SwiperModules.FreeMode, SwiperModules.Scrollbar],
       slidesPerView: 2.15,
       spaceBetween: 10,
       freeMode: true,

@@ -1,10 +1,10 @@
-import { Swiper } from "swiper";
-import { Scrollbar, Autoplay, } from "swiper/modules";
+// import { Swiper } from "swiper";
+// import { Scrollbar, Autoplay, } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".slide-welcome")) {
     new Swiper(".slide-welcome", {
-      modules: [Scrollbar, Autoplay],
+      modules: [SwiperModules.Scrollbar, SwiperModules.Autoplay],
       grabCursor: true,
       loop: true,
       autoplay: {
