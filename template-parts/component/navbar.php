@@ -45,7 +45,7 @@
             <?php if (count($menu['children']) === 0) : ?>
               <a href="<?= $menu['url'] ?>" class="block py-2 px-2 pl-3 pr-4 rounded md:px-3 md:py-2 dark:hover:bg-background-925" aria-current="page"><?= $menu['title'] ?></a>
             <?php else : ?>
-              <button id="dropdownNavbarLink-<?= $menu["ID"] ?>" data-dropdown-toggle="dropdownNavbar-<?= $menu["ID"] ?>" class="flex items-center justify-between w-full py-2 pl-3 pr-4  border-b border-gray-100 md:border-0 rounded md:px-3 md:py-2 md:w-auto dark:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-background-925">
+              <button id="dropdownNavbarLink-<?= $menu["ID"] ?>" data-dropdown-toggle="dropdownNavbar-<?= $menu["ID"] ?>" class="flex items-center justify-between w-full py-2 pl-3 pr-4 rounded md:px-3 md:py-2 md:w-auto dark:text-white dark:focus:text-white dark:hover:bg-background-925">
                 <?= $menu['title'] ?>
                 <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
