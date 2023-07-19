@@ -86,3 +86,9 @@ $is_desktop = !$is_mobile && !$is_tablet;
     <?= get_template_part('template-parts/component/navbar') ?>
 
     <main class="flex-grow w-full md:mt-8">
+
+        <div class="md:container">
+            <div class="h-40 w-full bg-red-600 flex justify-center items-center">
+                <h1>ADS</h1>
+            </div>
+        </div>

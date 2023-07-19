@@ -2,6 +2,17 @@
 <div class="md:mt-8"></div>
 <?= get_template_part('template-parts/page-welcome/section-slide'); ?>
 <hr class="opacity-0">
+<div class="container">
+  <div class="grid grid-cols-2 space-x-3">
+    <div class="h-40 w-full bg-red-600 flex justify-center items-center">
+      <h1>ADS</h1>
+    </div>
+    <div class="h-40 w-full bg-red-600 flex justify-center items-center">
+      <h1>ADS</h1>
+    </div>
+  </div>
+</div>
+<hr class="opacity-0">
 <?= get_template_part('template-parts/page-welcome/section-berita-utama'); ?>
 <hr class="opacity-0">
 <div class="container">
@@ -26,7 +37,7 @@
       <?= get_template_part('template-parts/page-welcome/section-terbaru'); ?>
     </div>
     <div class="col-span-12 md:col-span-4 space-y-3 hidden md:block">
-      <?php for ($i = 0; $i < 10; $i++) : ?>
+      <?php for ($i = 0; $i < 5; $i++) : ?>
         <div class="bg-red-800 text-white w-full aspect-[16/11] flex items-center justify-center">
           <h3>ADS</h3>
         </div>

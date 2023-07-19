@@ -116,7 +116,14 @@ $menus = get_menu_items_recursive($menu_items);
 
 <div class="w-full top-navbar-ghost"></div>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".top-navbar-ghost").style.height = `${document.querySelector(".top-navbar").offsetHeight}px`;
+  document.addEventListener("DOMContentLoaded", function() {
+    let counter = 0
+    let interval = setInterval(() => {
+      document.querySelector(".top-navbar-ghost").style.height = `${document.querySelector(".top-navbar").offsetHeight}px`;
+      counter++
+      if (counter > 10) {
+        clearInterval(interval)
+      }
+    }, 50);
   })
 </script>
