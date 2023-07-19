@@ -35,7 +35,7 @@ $is_desktop = !$is_mobile && !$is_tablet;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="<?= $_COOKIE['color-theme']?>">
 
 <head>
     <meta charset="UTF-8">
