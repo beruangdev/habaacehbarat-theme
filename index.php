@@ -4,10 +4,10 @@
 <hr class="opacity-0">
 <div class="container">
   <div class="grid grid-cols-2 space-x-3">
-    <div class="h-40 w-full bg-red-600 flex justify-center items-center">
+    <div class="h-40 bg-red-600 flex justify-center items-center">
       <h1>ADS</h1>
     </div>
-    <div class="h-40 w-full bg-red-600 flex justify-center items-center">
+    <div class="h-40 bg-red-600 flex justify-center items-center">
       <h1>ADS</h1>
     </div>
   </div>
