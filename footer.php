@@ -1,6 +1,5 @@
     </main>
 
-
     <footer class="rounded-lg mt-6">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">

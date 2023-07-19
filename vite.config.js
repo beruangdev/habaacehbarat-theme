@@ -1,30 +1,14 @@
-// View your website at your own local server
-// for example http://vite-php-setup.test
-
-// http://localhost:3000 is serving Vite on development
-// but accessing it directly will be empty
-
-// IMPORTANT image urls in CSS works fine
-// BUT you need to create a symlink on dev server to map this folder during dev:
-// ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
-// on production everything will work just fine
-
-//import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import liveReload from 'vite-plugin-live-reload'
 const { resolve } = require('path')
 const fs = require('fs')
 
-
-// https://vitejs.dev/config
 export default defineConfig({
 
   plugins: [
-    //vue(),
     liveReload(__dirname+'/**/*.php')
   ],
 
-  // config
   root: '',
   base: process.env.NODE_ENV === 'development'
     ? '/'

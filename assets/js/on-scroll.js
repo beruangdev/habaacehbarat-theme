@@ -27,7 +27,6 @@ window.addEventListener(
   "scroll",
   throttle(function () {
     var scrollY = window.scrollY;
-    if (scrollY < 500) changeNavbarBG(scrollY);
   }, 25)
 );
 

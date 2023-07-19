@@ -6,10 +6,8 @@ module.exports = {
     // https://tailwindcss.com/docs/content-configuration
     "./*.php",
     "./inc/**/*.php",
-    "./templates/**/*.php",
     "./template-parts/**/*.php",
     "./safelist.txt",
-    //'./**/*.php', // recursive search for *.php (be aware on every file change it will go even through /node_modules which can be slow, read doc)
     "./node_modules/flowbite/**/*.js",
   ],
   // safelist: [
@@ -26,23 +24,8 @@ module.exports = {
       },
     },
     colors: {
-      // ...colors,
       primary: colors.blue,
-      background: { ...colors.zinc, 75: "#f9f9fa" },
-      // background: {
-      //   50: "#f7f7f7",
-      //   75: "#f6f4f4",
-      //   100: "#e3e3e3",
-      //   200: "#c8c8c8",
-      //   300: "#a4a4a4",
-      //   400: "#6e6e6e",
-      //   500: "#595959",
-      //   600: "#3d3d3d",
-      //   700: "#2e2e2e",
-      //   800: "#212121",
-      //   900: "#121212",
-      //   950: "#050505",
-      // },
+      background: { ...colors.zinc, 75: "#f9f9fa", 925: "#0b0b0d" },
     },
   },
   plugins: [

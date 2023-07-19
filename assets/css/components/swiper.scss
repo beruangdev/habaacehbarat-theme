@@ -1,0 +1,23 @@
+.theme-habaacehbarat {
+  .swiper {
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      background: rgb(0 0 0 / 0.2);
+      .swiper-scrollbar-drag {
+        background: theme('colors.blue.500');
+      }
+    }
+  }
+}
+
+.dark {
+  .theme-habaacehbarat {
+    .swiper {
+      .swiper-scrollbar.swiper-scrollbar-horizontal {
+        background: rgba(255, 255, 255, 0.2);
+        .swiper-scrollbar-drag {
+          background: theme('colors.blue.700');
+        }
+      }
+    }
+  }
+}

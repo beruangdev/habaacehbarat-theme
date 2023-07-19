@@ -28,7 +28,6 @@ define('VITE_ENTRY_POINT', '/main.js');
 
 // enqueue hook
 add_action('wp_enqueue_scripts', function () {
-
     if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) {
 
         // insert hmr into head for live reload

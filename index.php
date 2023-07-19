@@ -1,20 +1,36 @@
 <?php get_header() ?>
-
-<?php get_template_part('template-parts/component/slide/slide-welcome'); ?>
-<?php get_template_part('template-parts/page-welcome/section-after-slide'); ?>
-<?php get_template_part('template-parts/page-welcome/section-event'); ?>
-<?php get_template_part('template-parts/page-welcome/section-fitur-campus'); ?>
+<?php get_template_part('template-parts/page-welcome/section-slide'); ?>
+<hr class="opacity-0">
+<?php get_template_part('template-parts/page-welcome/section-berita-utama'); ?>
+<hr class="opacity-0">
 <div class="container">
-  <hr class="h-px my-4 md:my-8 border-0">
+  <div class="grid grid-cols-12 space-x-4">
+    <div class="col-span-12 md:col-span-8">
+      <?php get_template_part('template-parts/component/post-list-horizontal', null, [
+        "title" => "PEMILU 2024",
+        "query" => [
+          'post_type' => 'post',
+          'posts_per_page' => 3,
+          'tax_query' =>
+          [
+            // [
+            //   'taxonomy' => 'position',
+            //   'field' => 'slug',
+            //   'terms' => 'berita-utama'
+            // ]
+          ]
+        ]
+      ]); ?>
+      <div class="mb-6"></div>
+      <?php get_template_part('template-parts/page-welcome/section-terbaru'); ?>
+    </div>
+    <div class="col-span-12 md:col-span-4 space-y-3">
+      <?php for ($i = 0; $i < 10; $i++) : ?>
+        <div class="bg-red-800 text-white w-full aspect-[16/11] flex items-center justify-center">
+          <h3>ADS</h3>
+        </div>
+      <?php endfor; ?>
+    </div>
+  </div>
 </div>
-<?php get_template_part('template-parts/page-welcome/section-post-list'); ?>
-<div class="container">
-  <hr class="h-px my-4 md:my-8 border-0">
-</div>
-<div class="container grid grid-cols-1 md:grid-cols-2 gap-4">
-  <?php get_template_part('template-parts/page-welcome/section-biologi'); ?>
-  <?php get_template_part('template-parts/page-welcome/section-mtk'); ?>
-  <?php get_template_part('template-parts/page-welcome/section-pgsd'); ?>
-</div>
-
 <?php get_footer() ?>

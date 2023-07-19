@@ -1,6 +1,6 @@
 <?php
-function custom_taxonomy_position()
-{
+
+add_action('init', function () {
   $labels = array(
     'name'              => _x('Positions', 'taxonomy general name', 'textdomain'),
     'singular_name'     => _x('Position', 'taxonomy singular name', 'textdomain'),
@@ -16,7 +16,7 @@ function custom_taxonomy_position()
   );
 
   $args = array(
-    'hierarchical'      => false,
+    'hierarchical'      => true,
     'labels'            => $labels,
     'show_ui'           => true,
     'show_admin_column' => true,
@@ -27,15 +27,7 @@ function custom_taxonomy_position()
   register_taxonomy('position', array('post'), $args);
 
   wp_insert_term(
-    'Slide Front',
+    'Slide Welcome Page',
     'position'
   );
-
-  // Tambahkan data Sidebar
-  wp_insert_term(
-    'Sidebar',
-    'position'
-  );
-}
-
-add_action('init', 'custom_taxonomy_position');
+});

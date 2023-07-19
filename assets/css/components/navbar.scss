@@ -1,17 +1,8 @@
 /* Custom styles for the navbar */
-.navbar {
+/* .top-navbar {
   @apply py-4;
-
-  // &.dark {
-  //   @apply bg-gray-900;
-  // }
-
-  &.light {
-    @apply bg-gray-100;
-  }
-
   a {
-    @apply py-2 px-4; 
+    @apply py-2 px-4;
 
     &.dark {
       @apply text-white;
@@ -29,14 +20,17 @@
       }
     }
   }
-}
+} */
 
 ul.menu > .menu-item > a, ul.menu > .menu-item > svg {
-  @apply text-white;
+  @apply text-black dark:text-white;
 }
 
 /* Styles for the primary menu container */
 .top-navbar {
+  a {
+    @apply no-underline;
+  }
   ul.menu {
     @apply flex list-none p-0 m-0;
   }
@@ -46,22 +40,6 @@ ul.menu > .menu-item > a, ul.menu > .menu-item > svg {
 
     a {
       @apply no-underline;
-
-      &.dark {
-        @apply text-white;
-
-        &:hover {
-          @apply bg-blue-700;
-        }
-      }
-
-      &.light {
-        @apply text-gray-900;
-
-        &:hover {
-          @apply text-blue-500;
-        }
-      }
     }
 
     ul.sub-menu {
@@ -70,26 +48,6 @@ ul.menu > .menu-item > a, ul.menu > .menu-item > svg {
 
       li.menu-item {
         @apply my-2;
-
-        a {
-          @apply no-underline;
-
-          &.dark {
-            @apply text-white;
-
-            &:hover {
-              @apply bg-blue-700;
-            }
-          }
-
-          &.light {
-            @apply text-gray-900;
-
-            &:hover {
-              @apply text-blue-500;
-            }
-          }
-        }
       }
     }
 

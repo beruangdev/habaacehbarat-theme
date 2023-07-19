@@ -1,6 +1,6 @@
 import { getLS } from "./local-storage";
 
-window.humanReadableTime = humanReadableTime
+window.humanReadableTime = humanReadableTime;
 function humanReadableTime(dateString) {
   const formatter = new Intl.RelativeTimeFormat(getPreferredLanguage(), {
     numeric: "auto",
@@ -49,7 +49,6 @@ function humanReadableTime(dateString) {
   }
   return "0000";
 }
-
 
 async function getPreferredLanguage() {
   let userLanguage = getLS("userLocation");

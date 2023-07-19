@@ -1,6 +1,6 @@
 <!-- file: archive.php -->
 <?php get_header(); ?>
-<div class="container mt-20">
+<div class="container">
   <div class="mb-6">
     <?php if (is_post_type_archive("post")) : ?>
       <h1><?php post_type_archive_title(); ?></h1>
@@ -19,14 +19,18 @@
     <?php endif; ?>
   </div>
 
-  <div class="flex flex-col gap-4">
-    <?php if (have_posts()) : ?>
-      <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part('template-parts/component/card/card-horizontal'); ?>
-      <?php endwhile ?>
-    <?php else : ?>
-      <p><?= post_type_archive_title() ?> is empty</p>
-    <?php endif ?>
+  <div class="grid grid-cols-12">
+    <div class="col-span-12 md:col-span-8">
+      <div class="flex flex-col gap-4">
+        <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+            <?php get_template_part('template-parts/component/card/card-horizontal-3'); ?>
+          <?php endwhile ?>
+        <?php else : ?>
+          <p><?= post_type_archive_title() ?> is empty</p>
+        <?php endif ?>
+      </div>
+    </div>
   </div>
 
   <div class="mx-auto w-fit">
