@@ -1,10 +1,8 @@
 (function () {
-  console.log("window load");
   var widget_code = "";
   var url_structure = "none";
   var default_language = "id";
   function fire_event(element, event) {
-    console.log("fire_event", element, event);
     try {
       if (document.createEventObject) {
         var evt = document.createEventObject();
@@ -17,7 +15,6 @@
     } catch (e) {}
   }
   function load_tlib() {
-    console.log("load_tlib");
     if (!window.gt_translate_script) {
       window.gt_translate_script = document.createElement("script");
       gt_translate_script.src =
@@ -36,7 +33,6 @@
 
   if (url_structure == "none") {
     window.doGTranslate = function (lang_pair) {
-      console.log("doGTranslate", lang_pair);
       if (lang_pair.value) lang_pair = lang_pair.value;
       if (lang_pair == "") return;
       var lang = lang_pair.split("|")[1];
@@ -64,7 +60,6 @@
       }
     };
     window.googleTranslateElementInit2 = function () {
-      console.log("googleTranslateElementInit2");
       new google.translate.TranslateElement(
         { pageLanguage: default_language, autoDisplay: false },
         "google_translate_element2"

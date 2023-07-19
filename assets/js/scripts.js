@@ -1,8 +1,9 @@
 import "./dark-mode.js";
 import "flowbite";
+import "./libs/helper.js";
+
 import "./language.js";
 import "./fingerprint.js";
-import "./libs/helper.js";
 import "./translate.js";
 
 import "swiper/css";
