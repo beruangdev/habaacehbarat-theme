@@ -36,7 +36,7 @@ $post_list_posts = $chunks[1] ?? [];
                 <?php endforeach; ?>
               </div>
               <a href="<?php the_permalink(); ?>" class="no-underline hover:opacity-75 relative">
-                <h5 class="border-l-4 md:text-2xl border-background-900 dark:border-background-100 pl-2 hover:border-primary-700 dark:hover:border-primary-700"><?php the_title(); ?></h2>
+                <h4 class="border-l-4 md:text-2xl border-background-900 dark:border-background-100 pl-2 hover:border-primary-700 dark:hover:border-primary-700"><?php the_title(); ?></h2>
               </a>
             </div>
           </div>
