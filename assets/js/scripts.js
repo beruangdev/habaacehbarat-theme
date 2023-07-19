@@ -1,5 +1,5 @@
 import "./dark-mode.js";
-import "flowbite";
+// import "flowbite";
 import "./libs/helper.js";
 
 import "./language.js";
