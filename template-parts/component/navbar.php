@@ -38,12 +38,12 @@
     $menus = get_menu_items_recursive($menu_items);
     ?>
 
-    <div class="hidden w-full md:block md:w-auto ml-auto" id="navbar-multi-level">
+    <div class="order-5 md:order-1 hidden w-full md:block md:w-auto ml-auto" id="navbar-multi-level">
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-0 md:mt-0 md:border-0 dark:border-gray-700">
         <?php foreach ($menus as $menu) : ?>
           <li>
             <?php if (count($menu['children']) === 0) : ?>
-              <a href="<?= $menu['url'] ?>" class="block px-2 pl-3 pr-4 rounded md:px-3 md:py-2 dark:hover:bg-background-925" aria-current="page"><?= $menu['title'] ?></a>
+              <a href="<?= $menu['url'] ?>" class="block py-2 px-2 pl-3 pr-4 rounded md:px-3 md:py-2 dark:hover:bg-background-925" aria-current="page"><?= $menu['title'] ?></a>
             <?php else : ?>
               <button id="dropdownNavbarLink-<?= $menu["ID"] ?>" data-dropdown-toggle="dropdownNavbar-<?= $menu["ID"] ?>" class="flex items-center justify-between w-full py-2 pl-3 pr-4  border-b border-gray-100 md:border-0 rounded md:px-3 md:py-2 md:w-auto dark:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-background-925">
                 <?= $menu['title'] ?>
@@ -83,12 +83,10 @@
             <?php endif; ?>
           </li>
         <?php endforeach; ?>
-
-
       </ul>
     </div>
 
-    <select id="language" class="ml-auto md:ml-3 skiptranslate bg-background-50 border border-background-300 text-background-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-900 dark:border-background-600 dark:placeholder-background-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 max-w-[5.5rem]">
+    <select id="language" class="order-2 ml-auto md:ml-3 skiptranslate bg-background-50 border border-background-300 text-background-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-900 dark:border-background-600 dark:placeholder-background-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 max-w-[5.5rem]">
       <option value="id" selected>IDN</option>
       <option value="en">ENG</option>
       <option value="ar">ARB</option>
@@ -96,7 +94,7 @@
       <option value="de">GER</option>
     </select>
 
-    <button type="button" class="theme-toggle ml-2 hover:bg-background-200 dark:hover:bg-background-925 w-11 rounded-md aspect-square flex items-center justify-center">
+    <button type="button" class="order-3 theme-toggle ml-2 hover:bg-background-200 dark:hover:bg-background-925 w-11 rounded-md aspect-square flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden w-5 h-5 -m-1">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
       </svg>
@@ -106,7 +104,7 @@
       </svg>
     </button>
 
-    <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+    <button data-collapse-toggle="navbar-multi-level" type="button" class="order-4 ml-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
