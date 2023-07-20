@@ -40,6 +40,7 @@ $is_desktop = !$is_mobile && !$is_tablet;
 <head>
     <script>
         // <?= $_COOKIE['color-theme'] ?>
+        
         function getCookie(name) {
             var nameEQ = name + "=";
             var ca = document.cookie.split(";");
