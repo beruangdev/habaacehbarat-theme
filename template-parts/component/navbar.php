@@ -25,14 +25,14 @@ $menus = get_menu_items_recursive($menu_items);
 ?>
 
 <nav class="top-navbar shadow-lg fixed w-full z-20 top-0 left-0 bg-background-75 dark:bg-background-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center mx-auto py-2 px-4 md:p-4">
+  <div class="max-w-screen-xl flex flex-wrap items-center mx-auto py-2 px-4">
     <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center logo">
       <?php
       $custom_logo_id = get_theme_mod('custom_logo');
       $logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
       ?>
       <?php if (has_custom_logo()) : ?>
-        <img src="<?= esc_url($logo_image[0]) ?>" class="h-8 mr-3" alt="<?= get_bloginfo('name') ?>">
+        <img src="<?= esc_url($logo_image[0]) ?>" class="h-10 w-auto mr-3" alt="<?= get_bloginfo('name') ?>">
       <?php else : ?>
         <img src="<?= esc_url(get_template_directory_uri()) ?>/images/logo.svg" alt="<?= get_bloginfo('name') ?>" class="h-8 mr-3">
       <?php endif; ?>
