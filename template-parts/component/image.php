@@ -1,1 +1,1 @@
-<img alt="<?= $args["alt"] ?>" data-src="<?= $args["src"] ?>" data-srcset="<?= $args["srcset"] ?>" class="lazy <?= $args["class"] ?>">
+<img alt="<?= $args["alt"] ?>" src="<?= $args["src"] ?>" srcset="<?= $args["srcset"] ?>" class="<?= $args["class"] ?>">
